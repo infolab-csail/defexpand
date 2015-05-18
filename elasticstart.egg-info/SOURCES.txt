@@ -1,0 +1,5 @@
+elasticstart.egg-info/PKG-INFO
+elasticstart.egg-info/SOURCES.txt
+elasticstart.egg-info/dependency_links.txt
+elasticstart.egg-info/pbr.json
+elasticstart.egg-info/top_level.txt
