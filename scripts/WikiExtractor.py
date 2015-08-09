@@ -63,7 +63,7 @@ import bz2
 import os.path
 import json
 from htmlentitydefs import name2codepoint
-from wikiscout import infobox_parser
+import infobox_parser
 
 ### PARAMS ####################################################################
 
@@ -608,13 +608,13 @@ def process_data(input, output):
             if (colon < 0 or title[:colon] in acceptedNamespaces) and \
                     not redirect:
                 #print id, title.encode('utf-8')
-                #sys.stdout.flush()
+                sys.stdout.flush()
                 text = ''.join(page)
                 
                 if not (filtered and ignore_page(text)):
                     infoboxes = extract_infoboxes(text)
                     update_infobox_summary(infobox_summary, infoboxes, id, title)
-                    #WikiDocument(output, id, title, infoboxes, text)
+                    WikiDocument(output, id, title, infoboxes, text)
                     not_ignored_counter += 1
             
             id = None
