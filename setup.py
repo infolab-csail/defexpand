@@ -12,6 +12,9 @@ setup(
     ],
     install_requires=[
         'nltk',
+        'mwparserfromhell',
+        'dewiki',
+        'unidecode',
         'elasticstart'
     ],
     dependency_links=[
