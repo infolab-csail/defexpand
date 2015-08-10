@@ -1,7 +1,7 @@
 import urllib2
 import re
 import infobox_parser
-from config import DATA_DIRECTORY
+from defexpand.config import DATA_DIRECTORY
 import json
 
 MAPPINGS_URLS = [
