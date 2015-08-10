@@ -1,6 +1,6 @@
 import urllib2
 import re
-from wikiscout import infobox_parser
+import infobox_parser
 from config import DATA_DIRECTORY
 import json
 
