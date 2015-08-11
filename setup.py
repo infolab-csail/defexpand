@@ -15,6 +15,7 @@ setup(
         'mwparserfromhell',
         'dewiki',
         'unidecode'
+    ],
     package_data = {
         'defexpand': ['data/*']
     }
