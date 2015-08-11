@@ -14,12 +14,7 @@ setup(
         'nltk',
         'mwparserfromhell',
         'dewiki',
-        'unidecode',
-        'elasticstart'
-    ],
-    dependency_links=[
-        'git+https://github.com/infolab-csail/elasticstart.git#egg=elasticstart'
-    ],
+        'unidecode'
     package_data = {
         'defexpand': ['data/*']
     }
