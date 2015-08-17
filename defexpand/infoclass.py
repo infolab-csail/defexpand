@@ -2,6 +2,7 @@ from HTMLParser import HTMLParser
 import json
 import config
 import re
+from unidecode import unidecode
 
 infoclass_pairs = json.load(open(config.DATA_DIRECTORY + 'infoclasses.json', 'r'))
 
@@ -92,6 +93,7 @@ class InfoOntology():
 
     def classes_above_infobox(self, infobox):
         wiki_class = self.infoclass_dict.get(infobox, '')
+        wiki_class = unidecode(wiki_class)
         return self.classes_above(wiki_class)
 
     def print_tree(self, wiki_class, indent=''):
