@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='defexpand',
-    version='0.1.0',
+    version='0.1.1',
     description='Generalizes definitions using DBpedia ontology and WordNet',
     author='Pond Premtoon',
     author_email='varot@mit.edu',
