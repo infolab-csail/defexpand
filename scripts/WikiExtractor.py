@@ -50,8 +50,8 @@ Options:
   -n NS, --ns NS        : accepted namespaces (separated by commas)
   -o, --output= dir     : place output files in specified directory (default
                           current)
-  -S, --summary= dir    : place infobox summary in specified directory (if not
-                          specified, prints summary to standard output)
+  -S, --summary= dir    : place infobox summary in specified directory
+                          (otherwise, prints summary to standard output)
   -s, --sections	: preserve sections
   -h, --help            : display this help and exit
 """
