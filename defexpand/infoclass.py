@@ -2,9 +2,11 @@ from HTMLParser import HTMLParser
 import json
 import config
 import re
-from unidecode import unidecode
 
+# load infoclasses and convert from unicode to str
 infoclass_pairs = json.load(open(config.DATA_DIRECTORY + 'infoclasses.json', 'r'))
+infoclass_pairs = [[s.encode('utf-8') if s else None for s in l]
+                   for l in infoclass_pairs]
 
 class InfoOntology():
     def __init__(self):
@@ -93,8 +95,6 @@ class InfoOntology():
 
     def classes_above_infobox(self, infobox):
         wiki_class = self.infoclass_dict.get(infobox, '')
-        if isinstance(wiki_class, unicode):
-            wiki_class = unidecode(wiki_class)
         return self.classes_above(wiki_class)
 
     def print_tree(self, wiki_class, indent=''):
